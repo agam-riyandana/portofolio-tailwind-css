@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website & Agam Riyandana </title>
+    <meta name="description" content="Portfolio dan blog profesional tentang SEO dan keamanan cyber dalam bahasa Indonesia">
+    <meta name="keywords" content="SEO, cyber security, keamanan cyber, blog teknologi, pengembangan web">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#10b981">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981', // emerald-500
+                        secondary: '#ecfdf5', // emerald-50
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s linear infinite',
+                        'gradient': 'gradient 15s ease infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-md z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">AGAM</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-primary transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition duration-300">About Me</a>
+                <a href="#blog" class="text-gray-700 hover:text-primary transition duration-300">Blog</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white w-full">
+            <div class="container mx-auto px-6 py-3 flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-primary transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition duration-300">About Me</a>
+                <a href="#blog" class="text-gray-700 hover:text-primary transition duration-300">Blog</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16 bg-gradient-to-b from-white to-secondary">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Hello, I'm <span class="text-primary">Agam Riyandana</span></h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Content Creator</h2>
+                    <p class="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                        Saya membuat konten kreatif dan berkualitas tinggi untuk media sosial, blog, dan platform digital lainnya yang membantu brand Anda terhubung dengan audiens.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#blog" class="bg-primary hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-center">
+                            Baca Blog
+                        </a>
+                        <a href="#contact" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-6 rounded-full border border-primary transition duration-300 text-center">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl">
+                        <img src="agam.webp&auto=format&fit=crop&w=774&q=80" 
+                             alt="Profile Picture" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Tentang Saya</h2>
+            <div class="max-w-4xl mx-auto">
+                <!-- Journey -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Perjalanan Karir Saya</h3>
+                    <p class="text-gray-600 mb-4">
+                        Saya adalah content creator independen dengan passion mendalam untuk teknologi internet terkini dan keamanan cyber. 
+                        Perjalanan saya dimulai sebagai seorang tech enthusiast yang selalu ingin tahu tentang cara kerja internet dan sistem keamanannya, yang kemudian berkembang menjadi karir dalam pembuatan konten edukatif dan informatif.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Sebagai seorang autodidak, saya terus mengikuti perkembangan teknologi terbaru dan tren keamanan cyber untuk memastikan konten yang saya buat selalu relevan dan akurat. 
+                        Saya menggabungkan pengetahuan teknis dengan kemampuan storytelling untuk membuat topik kompleks menjadi mudah dipahami oleh berbagai kalangan audiens.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3 mt-6">
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">Web Technologies</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">Cloud Computing</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">AI</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">Network Security</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">Ethical Hacking</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">Blog Writing</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">SEO</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-primary rounded-full text-sm">Content Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 md:py-24 bg-gradient-to-b from-white to-secondary">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">Blog</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Artikel terbaru tentang SEO dan keamanan cyber untuk membantu Anda mengoptimalkan dan melindungi kehadiran online Anda.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-r from-emerald-400 to-green-500 relative">
+                        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="SEO Optimization" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-4 text-white">
+                                <span class="bg-primary px-2 py-1 rounded-md text-xs font-medium">SEO</span>
+                                <h3 class="text-xl font-bold mt-2">Strategi SEO Terbaik untuk 2025</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>7 Maret 2025</span>
+                            <span class="mx-2">•</span>
+                            <i class="far fa-clock mr-2"></i>
+                            <span>8 menit membaca</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            Dalam era digital yang terus berkembang, strategi SEO yang efektif sangat penting untuk meningkatkan visibilitas online Anda. Artikel ini membahas teknik-teknik terbaru untuk mengoptimalkan website Anda.
+                        </p>
+                        
+                        <a href="#blog-post-1" class="inline-block text-primary font-medium hover:underline" onclick="showBlogPost('blog-post-1')">
+                            Baca selengkapnya <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-r from-emerald-400 to-green-500 relative">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Cyber Security" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-4 text-white">
+                                <span class="bg-primary px-2 py-1 rounded-md text-xs font-medium">Cyber Security</span>
+                                <h3 class="text-xl font-bold mt-2">Mengenal Serangan Cyber di Internet</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>7 Maret 2025</span>
+                            <span class="mx-2">•</span>
+                            <i class="far fa-clock mr-2"></i>
+                            <span>10 menit membaca</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            Serangan cyber semakin meningkat dan canggih. Artikel ini membahas jenis-jenis serangan cyber yang umum terjadi di internet dan bagaimana Anda dapat melindungi diri dan bisnis Anda.
+                        </p>
+                        
+                        <a href="#blog-post-2" class="inline-block text-primary font-medium hover:underline" onclick="showBlogPost('blog-post-2')">
+                            Baca selengkapnya <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Post 1 Full Content (Hidden by default) -->
+    <section id="blog-post-1" class="fixed inset-0 bg-white z-50 overflow-y-auto hidden">
+        <div class="container mx-auto px-6 py-12">
+            <button onclick="hideBlogPost('blog-post-1')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            
+            <article class="max-w-3xl mx-auto">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Strategi SEO Terbaik untuk 2023</h1>
+                
+                <div class="flex items-center text-sm text-gray-500 mb-6">
+                    <i class="far fa-calendar-alt mr-2"></i>
+                    <span>7 Maret 2025</span>
+                    <span class="mx-2">•</span>
+                    <i class="far fa-clock mr-2"></i>
+                    <span>8 menit membaca</span>
+                    <span class="mx-2">•</span>
+                    <i class="far fa-user mr-2"></i>
+                    <span>Agam Riyandana</span>
+                </div>
+                
+                <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                     alt="SEO Optimization" 
+                     class="w-full h-64 object-cover rounded-xl mb-8">
+                
+                <div class="prose prose-lg max-w-none">
+                    <h2>Pendahuluan</h2>
+                    <p>
+                        Dalam era digital yang terus berkembang, memiliki strategi SEO (Search Engine Optimization) yang efektif sangat penting untuk meningkatkan visibilitas online Anda. Dengan algoritma mesin pencari yang terus berubah, penting untuk tetap mengikuti tren terbaru dan praktik terbaik dalam SEO.
+                    </p>
+                    
+                    <h2>Apa itu SEO?</h2>
+                    <p>
+                        SEO adalah proses meningkatkan kualitas dan kuantitas lalu lintas website melalui hasil pencarian organik (non-berbayar) di mesin pencari. Tujuan utamanya adalah untuk meningkatkan peringkat website Anda di halaman hasil mesin pencari (SERP) untuk kata kunci yang relevan dengan bisnis atau konten Anda.
+                    </p>
+                    
+                    <h2>Strategi SEO Terbaik untuk 2023</h2>
+                    
+                    <h3>1. Fokus pada Pengalaman Pengguna (UX)</h3>
+                    <p>
+                        Google semakin memprioritaskan pengalaman pengguna dalam algoritma peringkatnya. Faktor-faktor seperti kecepatan halaman, responsivitas seluler, dan interaktivitas sekarang menjadi faktor peringkat yang penting. Pastikan website Anda memiliki:
+                    </p>
+                    <ul>
+                        <li>Waktu muat halaman yang cepat (di bawah 3 detik)</li>
+                        <li>Desain responsif yang bekerja dengan baik di semua perangkat</li>
+                        <li>Navigasi yang intuitif dan mudah digunakan</li>
+                        <li>Konten yang mudah dibaca dengan format yang baik</li>
+                    </ul>
+                    
+                    <h3>2. Konten Berkualitas Tinggi</h3>
+                    <p>
+                        Konten tetap menjadi raja dalam SEO. Namun, kualitas sekarang lebih penting daripada kuantitas. Konten Anda harus:
+                    </p>
+                    <ul>
+                        <li>Memberikan nilai yang nyata kepada pembaca</li>
+                        <li>Menjawab pertanyaan dan memecahkan masalah</li>
+                        <li>Komprehensif dan mendalam (artikel panjang cenderung berkinerja lebih baik)</li>
+                        <li>Diperbarui secara teratur untuk memastikan informasi tetap akurat</li>
+                    </ul>
+                    
+                    <h3>3. Optimasi untuk Pencarian Suara</h3>
+                    <p>
+                        Dengan meningkatnya penggunaan asisten suara seperti Siri, Alexa, dan Google Assistant, optimasi untuk pencarian suara menjadi semakin penting. Strategi untuk ini meliputi:
+                    </p>
+                    <ul>
+                        <li>Fokus pada kata kunci percakapan dan frasa panjang</li>
+                        <li>Menjawab pertanyaan umum dalam konten Anda</li>
+                        <li>Menggunakan bahasa alami dan konversasional</li>
+                        <li>Mengoptimalkan untuk featured snippets (kotak jawaban di bagian atas hasil pencarian)</li>
+                    </ul>
+                    
+                    <h3>4. Optimasi Teknis</h3>
+                    <p>
+                        Aspek teknis SEO tetap sangat penting. Pastikan untuk:
+                    </p>
+                    <ul>
+                        <li>Menggunakan HTTPS untuk keamanan</li>
+                        <li>Memiliki struktur URL yang bersih dan deskriptif</li>
+                        <li>Mengoptimalkan untuk Core Web Vitals</li>
+                        <li>Memastikan website Anda dapat diindeks dengan benar</li>
+                        <li>Memperbaiki tautan yang rusak dan pengalihan</li>
+                    </ul>
+                    
+                    <h3>5. Strategi Backlink yang Etis</h3>
+                    <p>
+                        Backlink tetap menjadi faktor peringkat yang kuat, tetapi kualitas jauh lebih penting daripada kuantitas. Fokus pada:
+                    </p>
+                    <ul>
+                        <li>Mendapatkan tautan dari situs otoritatif di niche Anda</li>
+                        <li>Menciptakan konten yang layak ditautkan secara alami</li>
+                        <li>Membangun hubungan dengan influencer dan pemimpin industri</li>
+                        <li>Menghindari taktik backlink yang manipulatif yang dapat mengakibatkan penalti</li>
+                    </ul>
+                    
+                    <h2>Kesimpulan</h2>
+                    <p>
+                        SEO terus berkembang, dan penting untuk tetap mengikuti tren dan praktik terbaik terbaru. Dengan menerapkan strategi-strategi di atas, Anda dapat meningkatkan visibilitas online Anda dan mendorong lebih banyak lalu lintas organik ke website Anda pada tahun 2023 dan seterusnya.
+                    </p>
+                    <p>
+                        Ingat, SEO adalah maraton, bukan sprint. Diperlukan waktu dan kesabaran untuk melihat hasil, tetapi dengan strategi yang tepat dan konsistensi, Anda akan melihat peningkatan peringkat dan lalu lintas organik dari waktu ke waktu.
+                    </p>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Bagikan Artikel Ini</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#3b5998] flex items-center justify-center text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1da1f2] flex items-center justify-center text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#0077b5] flex items-center justify-center text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blog Post 2 Full Content (Hidden by default) -->
+    <section id="blog-post-2" class="fixed inset-0 bg-white z-50 overflow-y-auto hidden">
+        <div class="container mx-auto px-6 py-12">
+            <button onclick="hideBlogPost('blog-post-2')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            
+            <article class="max-w-3xl mx-auto">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Mengenal Serangan Cyber di Internet</h1>
+                
+                <div class="flex items-center text-sm text-gray-500 mb-6">
+                    <i class="far fa-calendar-alt mr-2"></i>
+                    <span>7 Maret 2025</span>
+                    <span class="mx-2">•</span>
+                    <i class="far fa-clock mr-2"></i>
+                    <span>10 menit membaca</span>
+                    <span class="mx-2">•</span>
+                    <i class="far fa-user mr-2"></i>
+                    <span>Agam Riyandana</span>
+                </div>
+                
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                     alt="Cyber Security" 
+                     class="w-full h-64 object-cover rounded-xl mb-8">
+                
+                <div class="prose prose-lg max-w-none">
+                    <h2>Pendahuluan</h2>
+                    <p>
+                        Di era digital saat ini, serangan cyber menjadi ancaman yang semakin serius bagi individu, bisnis, dan bahkan pemerintah. Dengan semakin banyaknya aktivitas online, para pelaku kejahatan cyber terus mengembangkan metode serangan yang lebih canggih. Artikel ini akan membahas berbagai jenis serangan cyber yang umum terjadi di internet dan bagaimana Anda dapat melindungi diri.
+                    </p>
+                    
+                    <h2>Jenis-Jenis Serangan Cyber</h2>
+                    
+                    <h3>1. Phishing</h3>
+                    <p>
+                        Phishing adalah jenis serangan cyber di mana penyerang meniru entitas tepercaya untuk mendapatkan informasi sensitif seperti kata sandi, detail kartu kredit, atau data pribadi lainnya. Serangan ini biasanya dilakukan melalui:
+                    </p>
+                    <ul>
+                        <li>Email yang tampak resmi dari bank, layanan online, atau perusahaan tepercaya</li>
+                        <li>Situs web palsu yang meniru situs asli</li>
+                        <li>Pesan teks atau telepon yang mengklaim berasal dari organisasi tepercaya</li>
+                    </ul>
+                    <p>
+                        Untuk melindungi diri dari phishing, selalu periksa URL situs web dengan cermat, jangan mengklik tautan mencurigakan, dan jangan memberikan informasi sensitif melalui email atau panggilan telepon yang tidak diminta.
+                    </p>
+                    
+                    <h3>2. Malware</h3>
+                    <p>
+                        Malware (perangkat lunak berbahaya) adalah program yang dirancang untuk merusak atau mendapatkan akses tidak sah ke sistem komputer. Jenis-jenis malware meliputi:
+                    </p>
+                    <ul>
+                        <li><strong>Virus</strong>: Program yang menginfeksi file dan menyebar ke komputer lain</li>
+                        <li><strong>Trojan</strong>: Malware yang menyamar sebagai program sah</li>
+                        <li><strong>Ransomware</strong>: Mengenkripsi data pengguna dan meminta tebusan untuk membukanya</li>
+                        <li><strong>Spyware</strong>: Memantau aktivitas pengguna tanpa sepengetahuan mereka</li>
+                        <li><strong>Adware</strong>: Menampilkan iklan yang tidak diinginkan</li>
+                    </ul>
+                    <p>
+                        Untuk melindungi diri dari malware, gunakan perangkat lunak antivirus yang terpercaya, perbarui sistem operasi dan aplikasi Anda secara teratur, dan berhati-hatilah saat mengunduh file atau mengklik tautan.
+                    </p>
+                    
+                    <h3>3. Serangan DDoS (Distributed Denial of Service)</h3>
+                    <p>
+                        Serangan DDoS bertujuan untuk membuat layanan online tidak tersedia dengan membanjiri server atau jaringan dengan lalu lintas yang berlebihan. Serangan ini sering digunakan untuk:
+                    </p>
+                    <ul>
+                        <li>Mematikan situs web bisnis pesaing</li>
+                        <li>Pemerasan (meminta uang untuk menghentikan serangan)</li>
+                        <li>Mengalihkan perhatian dari serangan cyber lain yang sedang berlangsung</li>
+                    </ul>
+                    <p>
+                        Bisnis dapat melindungi diri dari serangan DDoS dengan menggunakan layanan mitigasi DDoS, menyebarkan server di beberapa lokasi, dan memiliki rencana respons insiden yang kuat.
+                    </p>
+                    
+                    <h3>4. Man-in-the-Middle (MitM)</h3>
+                    <p>
+                        Serangan Man-in-the-Middle terjadi ketika penyerang diam-diam menyadap komunikasi antara dua pihak. Penyerang dapat:
+                    </p>
+                    <ul>
+                        <li>Mencuri informasi sensitif yang dikirimkan</li>
+                        <li>Mengubah komunikasi tanpa sepengetahuan kedua belah pihak</li>
+                        <li>Menyamar sebagai salah satu pihak untuk mendapatkan informasi tambahan</li>
+                    </ul>
+                    <p>
+                        Untuk melindungi diri dari serangan MitM, gunakan koneksi yang dienkripsi (HTTPS), hindari jaringan Wi-Fi publik yang tidak aman, dan pertimbangkan untuk menggunakan VPN (Virtual Private Network).
+                    </p>
+                    
+                    <h3>5. SQL Injection</h3>
+                    <p>
+                        SQL Injection adalah teknik di mana penyerang menyisipkan kode berbahaya ke dalam kueri database untuk mendapatkan akses ke data sensitif. Serangan ini dapat digunakan untuk:
+                    </p>
+                    <ul>
+                        <li>Mencuri data pengguna seperti nama pengguna dan kata sandi</li>
+                        <li>Memodifikasi atau menghapus data dalam database</li>
+                        <li>Mendapatkan akses administratif ke sistem</li>
+                    </ul>
+                    <p>
+                        Pengembang dapat mencegah SQL Injection dengan menggunakan pernyataan parameterisasi, validasi input yang ketat, dan prinsip hak akses minimal untuk akun database.
+                    </p>
+                    
+                    <h3>6. Social Engineering</h3>
+                    <p>
+                        Social Engineering adalah manipulasi psikologis untuk menipu pengguna agar mengungkapkan informasi rahasia atau melakukan tindakan yang membahayakan keamanan. Teknik ini meliputi:
+                    </p>
+                    <ul>
+                        <li>Pretexting: Menciptakan skenario palsu untuk mendapatkan informasi</li>
+                        <li>Baiting: Menawarkan sesuatu yang menarik untuk memancing korban</li>
+                        <li>Quid pro quo: Menawarkan layanan dengan imbalan informasi</li>
+                        <li>Tailgating: Mengikuti seseorang ke area terlarang</li>
+                    </ul>
+                    <p>
+                        Kesadaran dan pendidikan adalah pertahanan terbaik terhadap social engineering. Selalu verifikasi identitas orang yang meminta informasi sensitif dan jangan terburu-buru membuat keputusan karena tekanan.
+                    </p>
+                    
+                    <h2>Cara Melindungi Diri dari Serangan Cyber</h2>
+                    
+                    <h3>Untuk Individu:</h3>
+                    <ul>
+                        <li>Gunakan kata sandi yang kuat dan unik untuk setiap akun</li>
+                        <li>Aktifkan autentikasi dua faktor (2FA) bila memungkinkan</li>
+                        <li>Perbarui perangkat lunak dan sistem operasi secara teratur</li>
+                        <li>Berhati-hatilah dengan tautan dan lampiran email</li>
+                        <li>Gunakan perangkat lunak keamanan yang terpercaya</li>
+                        <li>Cadangkan data penting secara teratur</li>
+                    </ul>
+                    
+                    <h3>Untuk Bisnis:</h3>
+                    <ul>
+                        <li>Terapkan kebijakan keamanan yang kuat</li>
+                        <li>Latih karyawan tentang praktik keamanan cyber</li>
+                        <li>Gunakan enkripsi untuk data sensitif</li>
+                        <li>Terapkan prinsip hak akses minimal</li>
+                        <li>Lakukan audit keamanan secara teratur</li>
+                        <li>Kembangkan rencana respons insiden</li>
+                        <li>Pertimbangkan asuransi cyber</li>
+                    </ul>
+                    
+                    <h2>Kesimpulan</h2>
+                    <p>
+                        Serangan cyber terus berkembang dan menjadi semakin canggih. Memahami berbagai jenis serangan dan menerapkan langkah-langkah keamanan yang tepat sangat penting untuk melindungi diri dan bisnis Anda di dunia digital yang semakin terhubung ini.
+                    </p>
+                    <p>
+                        Ingat, keamanan cyber adalah tanggung jawab bersama. Dengan tetap waspada dan menerapkan praktik keamanan yang baik, kita semua dapat berkontribusi untuk membuat internet menjadi tempat yang lebih aman.
+                    </p>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Bagikan Artikel Ini</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#3b5998] flex items-center justify-center text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1da1f2] flex items-center justify-center text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#0077b5] flex items-center justify-center text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-b from-white to-secondary">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Hubungi Saya</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Contact Info Card -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 transform transition duration-500 hover:shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Informasi Kontak</h3>
+                        <p class="text-gray-600 mb-8">
+                            Jangan ragu untuk menghubungi saya melalui salah satu saluran berikut. Saya selalu terbuka untuk mendiskusikan proyek baru, ide kreatif, atau peluang kerja sama.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mr-4 group-hover:bg-emerald-200 transition-colors">
+                                    <i class="fas fa-envelope text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Email</p>
+                                    <a href="mailto:agamriyandana7@gmail.com" class="text-gray-800 font-medium hover:text-primary transition-colors">hello@example.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mr-4 group-hover:bg-emerald-200 transition-colors">
+                                    <i class="fas fa-phone text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Telepon</p>
+                                    <a href="tel:+62" class="text-gray-800 font-medium hover:text-primary transition-colors">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mr-4 group-hover:bg-emerald-200 transition-colors">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Lokasi</p>
+                                    <p class="text-gray-800 font-medium">Jember, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-4">Terhubung Dengan Saya</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/agam-riyandana" class="w-10 h-10 rounded-lg bg-emerald-100 hover:bg-emerald-200 flex items-center justify-center transition-colors">
+                                    <i class="fab fa-linkedin-in text-primary"></i>
+                                </a>
+                                <a href="https://github.com/agam-riyandana" class="w-10 h-10 rounded-lg bg-emerald-100 hover:bg-emerald-200 flex items-center justify-center transition-colors">
+                                    <i class="fab fa-github text-primary"></i>
+                                </a>
+                                <a href="https://x.com/agam_riyandana1" class="w-10 h-10 rounded-lg bg-emerald-100 hover:bg-emerald-200 flex items-center justify-center transition-colors">
+                                    <i class="fab fa-twitter text-primary"></i>
+                                </a>
+                                <a href="https://instagram.com/realagam1" class="w-10 h-10 rounded-lg bg-emerald-100 hover:bg-emerald-200 flex items-center justify-center transition-colors">
+                                    <i class="fab fa-instagram text-primary"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Availability Card -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="h-48 bg-gradient-to-r from-emerald-400 to-green-500 flex items-center justify-center animate-gradient">
+                            <div class="text-center text-white p-6">
+                                <h3 class="text-2xl font-bold mb-2">Ingin Menghubungi Saya?</h3>
+                                <p class="text-emerald-100">Saya senang mendengar dari Anda</p>
+                            </div>
+                        </div>
+                        <div class="p-8 text-center">
+                            <div class="mb-8">
+                                <p class="text-gray-600 text-lg">Punya pertanyaan atau ingin bekerja sama? Jangan ragu untuk mengirim email dan saya akan segera menghubungi Anda kembali.</p>
+                            </div>
+                            
+                            <a href="mailto:agamriyandana7@gmail.com" class="inline-block bg-primary hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-xl transition duration-300 text-center">
+                                Email Saya
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-2xl font-bold text-white mb-4 inline-block">AGAM RIYANDANA</a>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Membuat konten kreatif dan berkualitas tinggi untuk media sosial, blog, dan platform digital yang membantu brand Anda terhubung dengan audiens dan mencapai tujuan bisnis.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/agam-riyandana" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="https://github.com/agam-riyandana" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                        <a href="https://x.com/agam_riyandana1" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="https://instagram.com/realagam1" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">Tentang Saya</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope mr-2 text-primary"></i>
+                            agamriyandana7@gmail.com
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                            Jember, Indonesia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+    <!-- Website Statistics - Now positioned above the copyright info -->
+    <div class="border-t border-gray-800 mt-10 pt-6">
+        <!-- Website Statistics - Now positioned above the copyright info -->
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-4 text-white text-center">Statistik Website <span class="text-xs text-gray-400 ml-2" id="last-updated"></span></h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <div class="bg-gray-800 rounded-lg p-4 transform transition duration-300 hover:scale-105 relative overflow-hidden">
+                    <div class="flex items-center relative z-10">
+                        <div class="w-12 h-12 rounded-lg bg-gray-700 flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Total Kunjungan</p>
+                            <p class="text-xl font-bold text-white" id="total-visits">0</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 h-1 bg-primary animate-pulse" style="width: 100%; opacity: 0.3;"></div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg p-4 transform transition duration-300 hover:scale-105 relative overflow-hidden">
+                    <div class="flex items-center relative z-10">
+                        <div class="w-12 h-12 rounded-lg bg-gray-700 flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Akses Langsung</p>
+                            <p class="text-xl font-bold text-white" id="direct-access">0</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 h-1 bg-primary animate-pulse" style="width: 100%; opacity: 0.3;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright and links -->
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400">&copy; <span id="current-year"></span> AGAM RIYANDANA. All Rights Reserved.</p>
+            <div class="mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <span class="mx-2 text-gray-600">|</span>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                // Scroll to section
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Set current year for copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Blog post view functions
+        function showBlogPost(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideBlogPost(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+        
+        // Simulated website statistics (would normally connect to an analytics service)
+        function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            obj.textContent = currentValue.toLocaleString();
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+    
+    function updateVisitStats() {
+        // In a real implementation, these would be fetched from an analytics service
+        const totalVisits = Math.floor(12000 + Math.random() * 1000);
+        const directAccess = Math.floor(8500 + Math.random() * 500);
+        
+        const totalVisitsElement = document.getElementById('total-visits');
+        const directAccessElement = document.getElementById('direct-access');
+        
+        // Animate the counting
+        animateValue(totalVisitsElement, parseInt(totalVisitsElement.textContent.replace(/,/g, '')) || 0, totalVisits, 1500);
+        animateValue(directAccessElement, parseInt(directAccessElement.textContent.replace(/,/g, '')) || 0, directAccess, 1500);
+        
+        // Update last updated time
+        const now = new Date();
+        document.getElementById('last-updated').textContent = `Diperbarui: ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+    }
+    
+    // Update stats on page load and every 30 seconds
+    updateVisitStats();
+    setInterval(updateVisitStats, 30000);
+    </script>
+</body>
+</html>
