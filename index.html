@@ -197,6 +197,7 @@
     </section>
   </main>
   
+
   <footer class="w-full text-center text-gray-500 text-xs py-4">
     <p id="copyright"></p>
   </footer>
@@ -207,6 +208,19 @@
 
     // Set dynamic copyright year
     document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} Agam Riyandana. All Rights Reserved.`;
+
+    // Function to update button links
+    function updateButtonLinks(contactLink, contributeLink) {
+      if (contactLink) {
+        document.getElementById('contact-manager-link').href = contactLink;
+      }
+      if (contributeLink) {
+        document.getElementById('contribute-link').href = contributeLink;
+      }
+    }
+
+    // Example: Call this function to update your links
+    // updateButtonLinks('https://your-contact-link.com', 'https://your-contribute-link.com');
 
     // Function to handle video or image as cover with loading state
     function setCoverMedia(mediaUrl, isVideo = false) {
