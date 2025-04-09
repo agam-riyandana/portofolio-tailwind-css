@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agam Riyandana - Kreator Digital Indonesia | Official Biolink</title>
+  <title>Agam Riyandana | Official Biolink</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Connect with Agam Riyandana, Kreator  Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
-  <meta name="keywords" content="Agam Riyandana, Kreator Digital Indonesia, Indonesian Creator, Digital, Profil, Contact, Jember">
+  <meta name="description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
+  <meta name="keywords" content="Bobon Santoso, Kreator Digital Indonesia, Indonesian Chef, Food, Culinary, Contact">
   <meta name="author" content="Agam Riyandana">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://agamriyandana.my.id">
@@ -17,19 +17,21 @@
   <meta property="og:title" content="Agam Riyandana - Kreator Digital Indonesia">
   <meta property="og:description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
   <meta property="og:image" content="https://agamriyandana.my.id/agam.webp">
-  <meta property="og:url" content="https://agamriyandana.my.id/agam.webp">
+  <meta property="og:url" content="https://agamriyandana.my.id/">
   <meta property="og:site_name" content="Agam Riyandana Official">
   
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Agam Riyandana - Kreator Digital Indonesia">
-  <meta name="twitter:description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
+  <meta name="twitter:description" content="Connect with Agam Riyandana, Kreator  Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
   <meta name="twitter:image" content="https://agamriyandana.my.id/agam.webp">
   
-  <!-- Stylesheets -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- Fixed: Using specific versioned CDNs instead of latest/redirect-prone URLs -->
+  <!-- Tailwind CSS - Using a specific version instead of the generic CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Lucide Icons - Using specific version via jsDelivr CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   
   <style>
     /* Custom styles with responsive considerations */
@@ -45,6 +47,8 @@
       scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      background-color: #000000;
+      color: #ffffff;
     }
     
     .cover-container {
@@ -58,6 +62,27 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    
+    /* Tailwind utility classes that might be missing in the minimized version */
+    .bg-black {
+      background-color: #000000;
+    }
+    
+    .text-white {
+      color: #ffffff;
+    }
+    
+    .bg-gray-200 {
+      background-color: #e5e7eb;
+    }
+    
+    .text-gray-800 {
+      color: #1f2937;
+    }
+    
+    .text-gray-400 {
+      color: #9ca3af;
     }
     
     /* Responsive adjustments */
@@ -96,6 +121,60 @@
       0% { background-position: 0% 0; }
       100% { background-position: -200% 0; }
     }
+    
+    /* Button styles */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.625rem 1rem;
+      background-color: #e5e7eb;
+      color: #1f2937;
+      font-weight: 500;
+      border-radius: 9999px;
+      text-align: center;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    
+    .btn:hover {
+      background-color: #d1d5db;
+    }
+    
+    .btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(229, 231, 235, 0.5);
+    }
+    
+    @media (min-width: 640px) {
+      .btn {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+      }
+    }
+    
+    /* Social icon styles */
+    .social-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      background-color: #e5e7eb;
+      color: #000000;
+      transition: background-color 0.2s;
+    }
+    
+    .social-icon:hover {
+      background-color: #d1d5db;
+    }
+    
+    @media (min-width: 640px) {
+      .social-icon {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
   </style>
   
   <!-- Structured Data for SEO -->
@@ -116,7 +195,7 @@
   </script>
 </head>
 
-<body class="bg-black min-h-screen flex flex-col items-center">
+<body class="min-h-screen flex flex-col items-center">
   <header class="w-full">
     <!-- Cover Photo/Video Section with loading state -->
     <div class="cover-container w-full image-loading" id="cover-container">
@@ -130,33 +209,33 @@
     </div>
   </header>
   
-  <main class="max-w-md w-full bg-black px-4 sm:px-6 md:px-8 flex flex-col items-center">
+  <!-- Fixed main landmark issue by using proper <main> element -->
+  <main id="main-content" class="max-w-md w-full px-4 sm:px-6 md:px-8 flex flex-col items-center">
     <!-- Profile Section with Semantic HTML -->
     <section class="text-center w-full py-4">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1 sm:mb-2 mt-2 sm:mt-4">Agam Riyandana</h1>
-      <p class="text-gray-400 text-base sm:text-lg md:text-xl mb-6 sm:mb-8">KREATOR DIGITAL INDONESIA</p>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1 sm:mb-2 mt-2 sm:mt-4">AGAM RIYANDANA</h1>
+      <p class="text-gray-400 text-base sm:text-lg md:text-xl mb-6 sm:mb-8">KREATOR DIGITAL</p>
     </section>
     
-        
-    <!-- Link Buttons - REPLACE THE HREF VALUES WITH YOUR ACTUAL LINKS -->
+    <!-- Link Buttons - Using custom CSS classes instead of Tailwind utilities -->
     <nav class="w-full space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-      <!-- CONTACT MANAGER BUTTON: Replace the href value with your actual contact link -->
+      <!-- CONTACT MANAGER BUTTON -->
       <a 
         href="mailto:agamriyandana7@gmail.com" 
         id="contact-manager-link"
-        class="block w-full py-2.5 sm:py-3 md:py-3.5 px-4 bg-gray-200 text-gray-800 font-medium rounded-full text-center text-sm sm:text-base transition-all hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+        class="btn"
         aria-label="Contact Manager"
         target="_blank"
         rel="noopener noreferrer"
       >
-        CONTACT ME
+        CONTACT MANAGER
       </a>
       
-      <!-- My Online Store BUTTON: Replace the href value with your actual contribution link -->
+      <!-- MY ONLINE STORE BUTTON -->
       <a 
         href="https://buylink.id/agam" 
         id="contribute-link"
-        class="block w-full py-2.5 sm:py-3 md:py-3.5 px-4 bg-gray-200 text-gray-800 font-medium rounded-full text-center text-sm sm:text-base transition-all hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+        class="btn"
         aria-label="Let's Contribute"
         target="_blank"
         rel="noopener noreferrer"
@@ -165,13 +244,13 @@
       </a>
     </nav>
     
-    <!-- Social Media Icons - Optimized for touch -->
+    <!-- Social Media Icons - Using custom CSS classes -->
     <section class="flex justify-center space-x-4 sm:space-x-5 mt-2 mb-8">
       <a 
         href="https://www.instagram.com/realagam1/" 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-200 text-black hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" 
+        class="social-icon" 
         aria-label="Follow Agam Riyandana on Instagram"
       >
         <i data-lucide="instagram" class="w-5 h-5 sm:w-6 sm:h-6"></i>
@@ -180,7 +259,7 @@
         href="https://www.facebook.com/agamriyandana.id" 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-200 text-black hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" 
+        class="social-icon" 
         aria-label="Follow Agam Riyandana on Facebook"
       >
         <i data-lucide="facebook" class="w-5 h-5 sm:w-6 sm:h-6"></i>
@@ -189,7 +268,7 @@
         href="https://youtube.com/@agam_riyandana" 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-200 text-black hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" 
+        class="social-icon" 
         aria-label="Subscribe to Agam Riyandana on YouTube"
       >
         <i data-lucide="youtube" class="w-5 h-5 sm:w-6 sm:h-6"></i>
@@ -197,17 +276,17 @@
     </section>
   </main>
   
-
-  <footer class="w-full text-center text-gray-500 text-xs py-4">
-    <p id="copyright"></p>
+  <!-- Footer with improved contrast -->
+  <footer class="w-full text-center py-4">
+    <p id="copyright" class="text-white text-xs"></p>
   </footer>
 
   <script>
     // Initialize Lucide icons
     lucide.createIcons();
 
-    // Set dynamic copyright year
-    document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} Agam Riyandana. All Rights Reserved.`;
+    // Set dynamic copyright year with improved contrast
+    document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} AGAM RIYANDANA. All Rights Reserved.`;
 
     // Function to update button links
     function updateButtonLinks(contactLink, contributeLink) {
@@ -218,9 +297,6 @@
         document.getElementById('contribute-link').href = contributeLink;
       }
     }
-
-    // Example: Call this function to update your links
-    // updateButtonLinks('https://your-contact-link.com', 'https://your-contribute-link.com');
 
     // Function to handle video or image as cover with loading state
     function setCoverMedia(mediaUrl, isVideo = false) {
@@ -254,23 +330,20 @@
       }
     }
 
-    // Detect connection speed and load appropriate media quality
-    function detectConnectionAndLoadMedia() {
-      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-      const highQualityImage = 'agam.webp';
-      
-      // If on slow connection, could load a lower quality image
-      if (connection && (connection.effectiveType === '2g' || connection.effectiveType === 'slow-2g')) {
-        // This would be a lower quality version of the same image
-        setCoverMedia(highQualityImage, false);
-      } else {
-        setCoverMedia(highQualityImage, false);
-      }
-    }
-
-    // Run on page load
+    // Load the cover image
     window.addEventListener('load', function() {
-      detectConnectionAndLoadMedia();
+      setCoverMedia('agam.webp', false);
+      
+      // Check for any elements with aria-hidden="true" and ensure they're not focusable
+      document.querySelectorAll('[aria-hidden="true"]').forEach(el => {
+        // Remove tabindex if it exists
+        el.setAttribute('tabindex', '-1');
+        
+        // Make all focusable elements inside non-focusable
+        el.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach(child => {
+          child.setAttribute('tabindex', '-1');
+        });
+      });
     });
 
     // Handle errors gracefully
