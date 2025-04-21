@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agam Riyandana | Official Biolink</title>
+  <title>Agam Riyandana - Kreator Digital Indonesia | Official Biolink</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
-  <meta name="keywords" content="Agam Riyandana, Kreator Digital Indonesia, Indonesian Chef, Food, Culinary, Contact">
+  <meta name="keywords" content="Agam Riyandana, Kreator Rakyat Indonesia, Indonesian, Contact, myid, pandi">
   <meta name="author" content="Agam Riyandana">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://agamriyandana.my.id">
+  <link rel="canonical" href="https://agamriyandana.my.id/">
+  
+  <!-- Performance: Preload critical assets -->
+  <link rel="preload" as="image" href="https://agamriyandana.my.id/agam.webp" fetchpriority="high">
+  
+  <!-- Performance: Preconnect to CDN domain -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:type" content="profile">
@@ -23,136 +29,81 @@
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Agam Riyandana - Kreator Digital Indonesia">
-  <meta name="twitter:description" content="Connect with Agam Riyandana, Kreator  Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
+  <meta name="twitter:description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
   <meta name="twitter:image" content="https://agamriyandana.my.id/agam.webp">
   
-  <!-- Fixed: Using specific versioned CDNs instead of latest/redirect-prone URLs -->
-  <!-- Tailwind CSS - Using a specific version instead of the generic CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  
-  <!-- Lucide Icons - Using specific version via jsDelivr CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  
+  <!-- Performance optimization: Inline critical CSS -->
   <style>
-    /* Custom styles with responsive considerations */
+    /* Critical CSS inlined to eliminate render-blocking CSS */
     :root {
       --primary-bg: #000000;
       --primary-text: #ffffff;
       --secondary-text: #a0a0a0;
-      --button-bg: #e0e0e0;
-      --button-text: #202020;
+      --button-bg: #e5e7eb;
+      --button-text: #1f2937;
     }
     
     html, body {
+      margin: 0;
+      padding: 0;
       scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       background-color: #000000;
       color: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 100%;
+      height: 100%;
     }
     
+    /* Improved responsive cover container */
     .cover-container {
       position: relative;
       width: 100%;
-      height: 45vh;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
       overflow: hidden;
+      background-color: #222;
     }
     
     .cover-media {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-    
-    /* Tailwind utility classes that might be missing in the minimized version */
-    .bg-black {
-      background-color: #000000;
-    }
-    
-    .text-white {
-      color: #ffffff;
-    }
-    
-    .bg-gray-200 {
-      background-color: #e5e7eb;
-    }
-    
-    .text-gray-800 {
-      color: #1f2937;
-    }
-    
-    .text-gray-400 {
-      color: #9ca3af;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 640px) {
-      .cover-container {
-        height: 35vh;
-      }
-    }
-    
-    @media (max-width: 380px) {
-      .cover-container {
-        height: 30vh;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .cover-container {
-        height: 50vh;
-      }
-    }
-    
-    /* Improve accessibility */
-    .focus-visible:focus {
-      outline: 2px solid #ffffff;
-      outline-offset: 2px;
-    }
-    
-    /* Preload animation for images */
-    .image-loading {
-      background: linear-gradient(90deg, #222 0%, #333 50%, #222 100%);
-      background-size: 200% 100%;
-      animation: loadingPulse 1.5s infinite;
-    }
-    
-    @keyframes loadingPulse {
-      0% { background-position: 0% 0; }
-      100% { background-position: -200% 0; }
-    }
-    
-    /* Button styles */
-    .btn {
       display: block;
+    }
+    
+    /* Button with icon styles */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      padding: 0.625rem 1rem;
+      padding: 0.75rem 1rem;
       background-color: #e5e7eb;
       color: #1f2937;
       font-weight: 500;
       border-radius: 9999px;
       text-align: center;
       font-size: 0.875rem;
-      transition: all 0.2s;
+      text-decoration: none;
+      transition: background-color 0.2s;
+      margin-bottom: 0.75rem;
+      box-sizing: border-box;
+      gap: 0.5rem; /* Space between icon and text */
     }
     
-    .btn:hover {
+    .btn:hover, .btn:focus {
       background-color: #d1d5db;
+      outline: none;
     }
     
     .btn:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(229, 231, 235, 0.5);
+      box-shadow: 0 0 0 2px rgba(229, 231, 235, 0.5);
     }
     
-    @media (min-width: 640px) {
-      .btn {
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-      }
-    }
-    
-    /* Social icon styles */
     .social-icon {
       width: 2.5rem;
       height: 2.5rem;
@@ -162,17 +113,123 @@
       border-radius: 9999px;
       background-color: #e5e7eb;
       color: #000000;
+      text-decoration: none;
       transition: background-color 0.2s;
+      margin: 0 0.5rem;
     }
     
-    .social-icon:hover {
+    .social-icon:hover, .social-icon:focus {
       background-color: #d1d5db;
+      outline: none;
     }
     
+    .social-icon:focus {
+      box-shadow: 0 0 0 2px rgba(229, 231, 235, 0.5);
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0 2rem;
+    }
+    
+    .container {
+      max-width: 28rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+    
+    .profile {
+      text-align: center;
+      width: 100%;
+      padding: 1rem 0;
+    }
+    
+    .profile-name {
+      font-size: 1.875rem;
+      font-weight: bold;
+      margin: 0.5rem 0 0.25rem;
+    }
+    
+    .profile-title {
+      color: #9ca3af;
+      font-size: 1rem;
+      margin: 0 0 1.5rem;
+    }
+    
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding: 1rem 0;
+      color: #ffffff;
+      font-size: 0.75rem;
+    }
+
+    .nav {
+      width: 100%;
+    }
+    
+    /* Lucide icon styles */
+    .lucide {
+      width: 1.25rem;
+      height: 1.25rem;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex-shrink: 0;
+    }
+    
+    /* Responsive adjustments */
     @media (min-width: 640px) {
+      .profile-name {
+        font-size: 2.25rem;
+      }
+      
+      .profile-title {
+        font-size: 1.125rem;
+      }
+      
+      .btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 1rem;
+      }
+      
       .social-icon {
         width: 3rem;
         height: 3rem;
+      }
+      
+      .lucide {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    
+    /* Improved responsive cover container for different screen sizes */
+    @media (max-width: 640px) {
+      .cover-container {
+        padding-top: 66.67%; /* 3:2 Aspect Ratio for mobile */
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .cover-container {
+        padding-top: 40%; /* Wider and shorter on large screens */
       }
     }
   </style>
@@ -195,164 +252,132 @@
   </script>
 </head>
 
-<body class="min-h-screen flex flex-col items-center">
-  <header class="w-full">
-    <!-- Cover Photo/Video Section with loading state -->
-    <div class="cover-container w-full image-loading" id="cover-container">
+<body>
+  <header>
+    <!-- Improved responsive cover container -->
+    <div class="cover-container">
       <img 
         src="agam.webp" 
-        alt="Agam Riyandana with community members" 
+        alt="Agam Riyandana Profil" 
         class="cover-media" 
+        width="1200" 
+        height="675"
+        fetchpriority="high"
         id="cover-image"
-        onload="this.parentElement.classList.remove('image-loading')"
       >
     </div>
   </header>
   
-  <!-- Fixed main landmark issue by using proper <main> element -->
-  <main id="main-content" class="max-w-md w-full px-4 sm:px-6 md:px-8 flex flex-col items-center">
+  <main id="main-content" class="container">
     <!-- Profile Section with Semantic HTML -->
-    <section class="text-center w-full py-4">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1 sm:mb-2 mt-2 sm:mt-4">AGAM RIYANDANA</h1>
-      <p class="text-gray-400 text-base sm:text-lg md:text-xl mb-6 sm:mb-8">KREATOR DIGITAL</p>
+    <section class="profile">
+      <h1 class="profile-name">Agam Riyandana</h1>
+      <p class="profile-title">Kreator Digital INDONESIA</p>
     </section>
     
-    <!-- Link Buttons - Using custom CSS classes instead of Tailwind utilities -->
-    <nav class="w-full space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-      <!-- CONTACT MANAGER BUTTON -->
+    <!-- Link Buttons with Icons -->
+    <nav class="nav">
+      <!-- CONTACT MANAGER BUTTON with icon -->
       <a 
-        href="mailto:agamriyandana7@gmail.com" 
+        href="mailto:admin@agamriyandana.my.id" 
         id="contact-manager-link"
         class="btn"
-        aria-label="Contact Manager"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
-        CONTACT MANAGER
+        <i data-lucide="mail" aria-hidden="true"></i>
+        CONTACT ME
       </a>
       
-      <!-- MY ONLINE STORE BUTTON -->
+      <!-- MY ONLINE STORE BUTTON with icon (replacing LET'S CONTRIBUTE) -->
       <a 
         href="https://buylink.id/agam" 
-        id="contribute-link"
+        id="store-link"
         class="btn"
-        aria-label="Let's Contribute"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
+        <i data-lucide="shopping-bag" aria-hidden="true"></i>
         MY ONLINE STORE
       </a>
     </nav>
     
-    <!-- Social Media Icons - Using custom CSS classes -->
-    <section class="flex justify-center space-x-4 sm:space-x-5 mt-2 mb-8">
+    <!-- Social Media Icons - Using Lucide icons -->
+    <section class="social-icons">
       <a 
         href="https://www.instagram.com/realagam1/" 
         target="_blank" 
-        rel="noopener noreferrer" 
+        rel="noopener" 
         class="social-icon" 
-        aria-label="Follow Agam Riyandana on Instagram"
+        aria-label="Instagram"
       >
-        <i data-lucide="instagram" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        <i data-lucide="instagram" aria-hidden="true"></i>
+        <span class="sr-only">Follow on Instagram</span>
       </a>
       <a 
         href="https://www.facebook.com/agamriyandana.id" 
         target="_blank" 
-        rel="noopener noreferrer" 
+        rel="noopener" 
         class="social-icon" 
-        aria-label="Follow Agam Riyandana on Facebook"
+        aria-label="Facebook"
       >
-        <i data-lucide="facebook" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        <i data-lucide="facebook" aria-hidden="true"></i>
+        <span class="sr-only">Follow on Facebook</span>
       </a>
       <a 
         href="https://youtube.com/@agam_riyandana" 
         target="_blank" 
-        rel="noopener noreferrer" 
+        rel="noopener" 
         class="social-icon" 
-        aria-label="Subscribe to Agam Riyandana on YouTube"
+        aria-label="YouTube"
       >
-        <i data-lucide="youtube" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        <i data-lucide="youtube" aria-hidden="true"></i>
+        <span class="sr-only">Subscribe on YouTube</span>
       </a>
     </section>
   </main>
   
-  <!-- Footer with improved contrast -->
-  <footer class="w-full text-center py-4">
-    <p id="copyright" class="text-white text-xs"></p>
+  <footer>
+    <p id="copyright" class="copyright"></p>
   </footer>
 
+  <!-- Load Lucide icons with performance optimizations -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" defer></script>
+  
+  <!-- Defer non-critical JavaScript -->
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-
-    // Set dynamic copyright year with improved contrast
-    document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} AGAM RIYANDANA. All Rights Reserved.`;
+    // Set dynamic copyright year
+    document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} Agam Riyandana. All Rights Reserved.`;
 
     // Function to update button links
-    function updateButtonLinks(contactLink, contributeLink) {
+    function updateButtonLinks(contactLink, storeLink) {
       if (contactLink) {
         document.getElementById('contact-manager-link').href = contactLink;
       }
-      if (contributeLink) {
-        document.getElementById('contribute-link').href = contributeLink;
+      if (storeLink) {
+        document.getElementById('store-link').href = storeLink;
       }
     }
 
-    // Function to handle video or image as cover with loading state
-    function setCoverMedia(mediaUrl, isVideo = false) {
-      const container = document.getElementById('cover-container');
-      container.classList.add('image-loading');
-      container.innerHTML = '';
-      
-      if (isVideo) {
-        const video = document.createElement('video');
-        video.src = mediaUrl;
-        video.className = 'cover-media';
-        video.id = 'cover-video';
-        video.autoplay = true;
-        video.loop = true;
-        video.muted = true;
-        video.playsInline = true;
-        video.onloadeddata = function() {
-          container.classList.remove('image-loading');
-        };
-        container.appendChild(video);
-      } else {
-        const img = document.createElement('img');
-        img.src = mediaUrl;
-        img.className = 'cover-media';
-        img.id = 'cover-image';
-        img.alt = 'Agam Riyandana Cover Photo';
-        img.onload = function() {
-          container.classList.remove('image-loading');
-        };
-        container.appendChild(img);
-      }
-    }
-
-    // Load the cover image
-    window.addEventListener('load', function() {
-      setCoverMedia('agam.webp', false);
-      
-      // Check for any elements with aria-hidden="true" and ensure they're not focusable
-      document.querySelectorAll('[aria-hidden="true"]').forEach(el => {
-        // Remove tabindex if it exists
-        el.setAttribute('tabindex', '-1');
-        
-        // Make all focusable elements inside non-focusable
-        el.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach(child => {
-          child.setAttribute('tabindex', '-1');
-        });
-      });
+    // Handle errors gracefully for images
+    document.getElementById('cover-image').addEventListener('error', function() {
+      this.onerror = null;
+      this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%23333"%3E%3C/rect%3E%3Ctext x="50" y="50" font-family="system-ui" font-size="12" text-anchor="middle" fill="%23fff"%3EImage not available%3C/text%3E%3C/svg%3E';
     });
-
-    // Handle errors gracefully
-    window.addEventListener('error', function(e) {
-      if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
-        e.target.parentElement.classList.remove('image-loading');
-        // Could add a fallback image here
+    
+    // Initialize Lucide icons after the script has loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof lucide !== 'undefined' && lucide.createIcons) {
+        lucide.createIcons();
+      } else {
+        // Fallback if Lucide fails to load
+        window.addEventListener('load', function() {
+          if (typeof lucide !== 'undefined' && lucide.createIcons) {
+            lucide.createIcons();
+          }
+        });
       }
-    }, true);
+    });
   </script>
 </body>
 </html>
