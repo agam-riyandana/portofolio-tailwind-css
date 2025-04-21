@@ -1,0 +1,61 @@
+{
+  "headers": [
+    {
+      "source": "/service-worker.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "content-security-policy",
+          "value": "upgrade-insecure-requests"
+        },
+        {
+          "key": "referrer-policy",
+          "value": "no-referrer-when-downgrade"
+        },
+        {
+          "key": "permissions-policy",
+          "value": "accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(self), encrypted-media=(), fullscreen=*, geolocation=(self), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=*, picture-in-picture=*, publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=*, usb=(), xr-spatial-tracking=(), gamepad=(), serial=()"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "https://agamriyandana.my.id"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "authorized"
+        }
+      ],
+      "headers": [
+        {
+          "key": "x-authorized",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}
