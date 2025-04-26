@@ -1,0 +1,8 @@
+:root {
+  --primary-bg: #000000;      /* Change this for background color */
+  --primary-text: #ffffff;    /* Change this for text color */
+  --secondary-text: #9ca3af;  /* Change this for secondary text */
+  --button-bg: #e5e7eb;       /* Change this for button background */
+  --button-text: #1f2937;     /* Change this for button text */
+  --button-hover: #d1d5db;    /* Change this for button hover */
+}
