@@ -1,164 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agam Riyandana - Kreator Digital Indonesia | Official Biolink</title>
+  <title>Agam Riyandana | Official Biolink</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
-  <meta name="keywords" content="Agam Riyandana, Kreator Rakyat Indonesia, Indonesian, Contact, myid, pandi">
+  <meta name="keywords" content="Agam Riyandana, Rakyat Indonesia, Indonesian Kreator, Digital, kreatif, Contact">
   <meta name="author" content="Agam Riyandana">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://agamriyandana.my.id/">
+  <link rel="canonical" href="https://agamofficial.my.id">
   
   <!-- Performance: Preload critical assets -->
-  <link rel="preload" as="image" href="https://agamriyandana.my.id/agam.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="https://agamofficial.my.id/agam.webp" fetchpriority="high">
   
   <!-- Performance: Preconnect to CDN domain -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Agam Riyandana - Kreator Digital Indonesia">
+  <meta property="og:title" content="Agam Riyandana">
   <meta property="og:description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
-  <meta property="og:image" content="https://agamriyandana.my.id/agam.webp">
-  <meta property="og:url" content="https://agamriyandana.my.id/">
+  <meta property="og:image" content="https://agamofficial.my.id/agam.webp">
+  <meta property="og:url" content="https://agamofficial.my.id/">
   <meta property="og:site_name" content="Agam Riyandana Official">
   
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Agam Riyandana - Kreator Digital Indonesia">
   <meta name="twitter:description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
-  <meta name="twitter:image" content="https://agamriyandana.my.id/agam.webp">
+  <meta name="twitter:image" content="https://agamofficial.my.id/agam.webp">
   
-  <!-- Performance optimization: Inline critical CSS -->
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // You can easily change these colors to customize your theme
+            primary: {
+              bg: '#000000',      // Background color (currently black)
+              text: '#ffffff',    // Primary text color (currently white)
+            },
+            secondary: {
+              text: '#a0a0a0',    // Secondary text color (currently light gray)
+            },
+            button: {
+              bg: '#e5e7eb',      // Button background (currently light gray)
+              text: '#1f2937',    // Button text (currently dark gray)
+              hover: '#d1d5db',   // Button hover background
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Agam Riyandana",
+      "jobTitle": "Kreator Digital Indonesia",
+      "url": "https://agamofficial.my.id",
+      "sameAs": [
+        "https://www.instagram.com/realagam1/",
+        "https://www.facebook.com/agamriyandana.id",
+        "https://youtube.com/@agam_riyandana"
+      ],
+      "image": "https://agamofficial.my.id/agam.webp"
+    }
+  </script>
+  
   <style>
-    /* Critical CSS inlined to eliminate render-blocking CSS */
-    :root {
-      --primary-bg: #000000;
-      --primary-text: #ffffff;
-      --secondary-text: #a0a0a0;
-      --button-bg: #e5e7eb;
-      --button-text: #1f2937;
-    }
-    
-    html, body {
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      background-color: #000000;
-      color: #ffffff;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      width: 100%;
-      height: 100%;
-    }
-    
-    /* Improved responsive cover container */
-    .cover-container {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
-      overflow: hidden;
-      background-color: #222;
-    }
-    
-    .cover-media {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    /* Button with icon styles */
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background-color: #e5e7eb;
-      color: #1f2937;
-      font-weight: 500;
-      border-radius: 9999px;
-      text-align: center;
-      font-size: 0.875rem;
-      text-decoration: none;
-      transition: background-color 0.2s;
-      margin-bottom: 0.75rem;
-      box-sizing: border-box;
-      gap: 0.5rem; /* Space between icon and text */
-    }
-    
-    .btn:hover, .btn:focus {
-      background-color: #d1d5db;
-      outline: none;
-    }
-    
-    .btn:focus {
-      box-shadow: 0 0 0 2px rgba(229, 231, 235, 0.5);
-    }
-    
-    .social-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 9999px;
-      background-color: #e5e7eb;
-      color: #000000;
-      text-decoration: none;
-      transition: background-color 0.2s;
-      margin: 0 0.5rem;
-    }
-    
-    .social-icon:hover, .social-icon:focus {
-      background-color: #d1d5db;
-      outline: none;
-    }
-    
-    .social-icon:focus {
-      box-shadow: 0 0 0 2px rgba(229, 231, 235, 0.5);
-    }
-    
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      margin: 1.5rem 0 2rem;
-    }
-    
-    .container {
-      max-width: 28rem;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 1rem;
-      box-sizing: border-box;
-    }
-    
-    .profile {
-      text-align: center;
-      width: 100%;
-      padding: 1rem 0;
-    }
-    
-    .profile-name {
-      font-size: 1.875rem;
-      font-weight: bold;
-      margin: 0.5rem 0 0.25rem;
-    }
-    
-    .profile-title {
-      color: #9ca3af;
-      font-size: 1rem;
-      margin: 0 0 1.5rem;
-    }
-    
+    /* Only keeping minimal styles that are hard to do with Tailwind */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -169,17 +87,6 @@
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border-width: 0;
-    }
-    
-    .copyright {
-      text-align: center;
-      padding: 1rem 0;
-      color: #ffffff;
-      font-size: 0.75rem;
-    }
-
-    .nav {
-      width: 100%;
     }
     
     /* Lucide icon styles */
@@ -194,72 +101,23 @@
       flex-shrink: 0;
     }
     
-    /* Responsive adjustments */
     @media (min-width: 640px) {
-      .profile-name {
-        font-size: 2.25rem;
-      }
-      
-      .profile-title {
-        font-size: 1.125rem;
-      }
-      
-      .btn {
-        padding: 0.875rem 1.25rem;
-        font-size: 1rem;
-      }
-      
-      .social-icon {
-        width: 3rem;
-        height: 3rem;
-      }
-      
       .lucide {
         width: 1.5rem;
         height: 1.5rem;
       }
     }
-    
-    /* Improved responsive cover container for different screen sizes */
-    @media (max-width: 640px) {
-      .cover-container {
-        padding-top: 66.67%; /* 3:2 Aspect Ratio for mobile */
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .cover-container {
-        padding-top: 40%; /* Wider and shorter on large screens */
-      }
-    }
   </style>
-  
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Agam Riyandana",
-      "jobTitle": "Kreator Digital Indonesia",
-      "url": "https://agamriyandana.my.id",
-      "sameAs": [
-        "https://www.instagram.com/realagam1/",
-        "https://www.facebook.com/agamriyandana.id",
-        "https://youtube.com/@agam_riyandana"
-      ],
-      "image": "https://agamriyandana.my.id/agam.webp"
-    }
-  </script>
 </head>
 
-<body>
+<body class="bg-[#000000] text-[#ffffff] font-sans m-0 p-0 w-full h-full antialiased">
   <header>
     <!-- Improved responsive cover container -->
-    <div class="cover-container">
+    <div class="relative w-full pt-[56.25%] overflow-hidden bg-gray-800">
       <img 
         src="agam.webp" 
         alt="Agam Riyandana Profil" 
-        class="cover-media" 
+        class="absolute top-0 left-0 w-full h-full object-cover block" 
         width="1200" 
         height="675"
         fetchpriority="high"
@@ -268,32 +126,32 @@
     </div>
   </header>
   
-  <main id="main-content" class="container">
+  <main id="main-content" class="max-w-[28rem] w-full mx-auto px-4 box-border">
     <!-- Profile Section with Semantic HTML -->
-    <section class="profile">
-      <h1 class="profile-name">Agam Riyandana</h1>
-      <p class="profile-title">Kreator Digital</p>
+    <section class="text-center w-full py-4">
+      <h1 class="text-2xl sm:text-4xl font-bold mt-2 mb-1">Agam Riyandana</h1>
+      <p class="text-[#9ca3af] text-base sm:text-lg m-0 mb-6">Kreator Digital</p>
     </section>
     
     <!-- Link Buttons with Icons -->
-    <nav class="nav">
+    <nav class="w-full">
       <!-- CONTACT MANAGER BUTTON with icon -->
       <a 
         href="mailto:hi@agamofficial.my.id" 
         id="contact-manager-link"
-        class="btn"
+        class="flex items-center justify-center w-full py-3 sm:py-3.5 px-4 sm:px-5 bg-[#e5e7eb] text-[#1f2937] font-medium rounded-full text-center text-sm sm:text-base no-underline transition-colors duration-200 mb-3 box-border gap-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]"
         target="_blank"
         rel="noopener"
       >
         <i data-lucide="mail" aria-hidden="true"></i>
-        CONTACT ME
+        CONTACT MANAGER
       </a>
       
-      <!-- MY ONLINE STORE BUTTON with icon (replacing LET'S CONTRIBUTE) -->
+      <!-- MY ONLINE STORE BUTTON with icon -->
       <a 
         href="https://buylink.id/agam" 
         id="store-link"
-        class="btn"
+        class="flex items-center justify-center w-full py-3 sm:py-3.5 px-4 sm:px-5 bg-[#e5e7eb] text-[#1f2937] font-medium rounded-full text-center text-sm sm:text-base no-underline transition-colors duration-200 mb-3 box-border gap-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]"
         target="_blank"
         rel="noopener"
       >
@@ -303,12 +161,12 @@
     </nav>
     
     <!-- Social Media Icons - Using Lucide icons -->
-    <section class="social-icons">
+    <section class="flex justify-center my-6 sm:my-8">
       <a 
-        href="https://www.instagram.com/realagam1/" 
+        href="https://www.instagram.com/realagam1" 
         target="_blank" 
         rel="noopener" 
-        class="social-icon" 
+        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-[#e5e7eb] text-black no-underline transition-colors duration-200 mx-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
         aria-label="Instagram"
       >
         <i data-lucide="instagram" aria-hidden="true"></i>
@@ -318,7 +176,7 @@
         href="https://www.facebook.com/agamriyandana.id" 
         target="_blank" 
         rel="noopener" 
-        class="social-icon" 
+        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-[#e5e7eb] text-black no-underline transition-colors duration-200 mx-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
         aria-label="Facebook"
       >
         <i data-lucide="facebook" aria-hidden="true"></i>
@@ -328,7 +186,7 @@
         href="https://youtube.com/@agam_riyandana" 
         target="_blank" 
         rel="noopener" 
-        class="social-icon" 
+        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-[#e5e7eb] text-black no-underline transition-colors duration-200 mx-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
         aria-label="YouTube"
       >
         <i data-lucide="youtube" aria-hidden="true"></i>
@@ -338,7 +196,7 @@
   </main>
   
   <footer>
-    <p id="copyright" class="copyright"></p>
+    <p id="copyright" class="text-center py-4 text-white text-xs"></p>
   </footer>
 
   <!-- Load Lucide icons with performance optimizations -->
