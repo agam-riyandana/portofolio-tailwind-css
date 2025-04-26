@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>Agam Riyandana | Official Biolink</title>
   
   <!-- SEO Meta Tags -->
@@ -32,49 +33,50 @@
   <meta name="twitter:description" content="Connect with Agam Riyandana, Kreator Digital Indonesia. Find contact information, contribution opportunities, and social media profiles.">
   <meta name="twitter:image" content="https://agamofficial.my.id/agam.webp">
   
-  <!-- Production-ready Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   
-  <!-- Custom styles to replace Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // You can easily change these colors to customize your theme
+            primary: {
+              bg: '#000000',      // Background color (currently black)
+              text: '#ffffff',    // Primary text color (currently white)
+            },
+            secondary: {
+              text: '#a0a0a0',    // Secondary text color (currently light gray)
+            },
+            button: {
+              bg: '#e5e7eb',      // Button background (currently light gray)
+              text: '#1f2937',    // Button text (currently dark gray)
+              hover: '#d1d5db',   // Button hover background
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Agam Riyandana",
+      "jobTitle": "Kreator Digital Indonesia",
+      "url": "https://agamofficial.my.id",
+      "sameAs": [
+        "https://www.instagram.com/realagam1/",
+        "https://www.facebook.com/agamriyandana.id",
+        "https://youtube.com/@agam_riyandana"
+      ],
+      "image": "https://agamofficial.my.id/agam.webp"
+    }
+  </script>
+  
   <style>
-    /* Custom colors that were in the Tailwind config */
-    :root {
-      --primary-bg: #000000;
-      --primary-text: #ffffff;
-      --secondary-text: #9ca3af;
-      --button-bg: #e5e7eb;
-      --button-text: #1f2937;
-      --button-hover: #d1d5db;
-    }
-    
-    body {
-      background-color: var(--primary-bg);
-      color: var(--primary-text);
-    }
-    
-    .profile-title {
-      color: var(--secondary-text);
-    }
-    
-    .custom-button {
-      background-color: var(--button-bg);
-      color: var(--button-text);
-    }
-    
-    .custom-button:hover, .custom-button:focus {
-      background-color: var(--button-hover);
-    }
-    
-    .social-icon {
-      background-color: var(--button-bg);
-      color: #000000;
-    }
-    
-    .social-icon:hover, .social-icon:focus {
-      background-color: var(--button-hover);
-    }
-    
-    /* Screen reader only class */
+    /* Only keeping minimal styles that are hard to do with Tailwind */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -105,49 +107,13 @@
         height: 1.5rem;
       }
     }
-    
-    /* Fallback cover image style */
-    .cover-fallback {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #333;
-      color: #fff;
-      font-size: 1.5rem;
-      text-align: center;
-      padding: 2rem;
-    }
   </style>
-  
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Agam Riyandana",
-      "jobTitle": "Kreator Digital Indonesia",
-      "url": "https://agamofficial.my.id",
-      "sameAs": [
-        "https://www.instagram.com/realagam1/",
-        "https://www.facebook.com/agamriyandana.id",
-        "https://youtube.com/@agam_riyandana"
-      ],
-      "image": "https://agamofficial.my.id/agam.webp"
-    }
-  </script>
-  
-  <!-- Inline base64 fallback image for immediate availability -->
-  <script>
-    // Create a simple fallback image as base64
-    const fallbackImageBase64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgODAwIDQwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMzMzMiPjwvcmVjdD48dGV4dCB4PSI0MDAiIHk9IjIwMCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSwtYXBwbGUtc3lzdGVtLEJsaW5rTWFjU3lzdGVtRm9udCxTZWdvZSBVSSxSb2JvdG8sT3h5Z2VuLFVidW50dSxDYW50YXJlbGwsT3BlbiBTYW5zLEhlbHZldGljYSBOZXVlLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIj5BZ2FtIFJpeWFuZGFuYTwvdGV4dD48L3N2Zz4=';
-  </script>
 </head>
 
-<body class="font-sans m-0 p-0 w-full h-full antialiased">
+<body class="bg-[#000000] text-[#ffffff] font-sans m-0 p-0 w-full h-full antialiased">
   <header>
-    <!-- Improved responsive cover container with fallback content -->
-    <div class="relative w-full pt-[56.25%] overflow-hidden bg-gray-800" id="cover-container">
-      <!-- Primary image with absolute URL -->
+    <!-- Improved responsive cover container -->
+    <div class="relative w-full pt-[56.25%] overflow-hidden bg-gray-800">
       <img 
         src="agam.webp" 
         alt="Agam Riyandana Profil" 
@@ -156,7 +122,6 @@
         height="675"
         fetchpriority="high"
         id="cover-image"
-        onerror="handleImageError(this)"
       >
     </div>
   </header>
@@ -165,7 +130,7 @@
     <!-- Profile Section with Semantic HTML -->
     <section class="text-center w-full py-4">
       <h1 class="text-2xl sm:text-4xl font-bold mt-2 mb-1">Agam Riyandana</h1>
-      <p class="profile-title text-base sm:text-lg m-0 mb-6">Kreator Digital</p>
+      <p class="text-[#9ca3af] text-base sm:text-lg m-0 mb-6">Kreator Digital</p>
     </section>
     
     <!-- Link Buttons with Icons -->
@@ -174,7 +139,7 @@
       <a 
         href="mailto:hi@agamofficial.my.id" 
         id="contact-manager-link"
-        class="custom-button flex items-center justify-center w-full py-3 sm:py-3.5 px-4 sm:px-5 font-medium rounded-full text-center text-sm sm:text-base no-underline transition-colors duration-200 mb-3 box-border gap-2 focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]"
+        class="flex items-center justify-center w-full py-3 sm:py-3.5 px-4 sm:px-5 bg-[#e5e7eb] text-[#1f2937] font-medium rounded-full text-center text-sm sm:text-base no-underline transition-colors duration-200 mb-3 box-border gap-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]"
         target="_blank"
         rel="noopener"
       >
@@ -186,7 +151,7 @@
       <a 
         href="https://buylink.id/agam" 
         id="store-link"
-        class="custom-button flex items-center justify-center w-full py-3 sm:py-3.5 px-4 sm:px-5 font-medium rounded-full text-center text-sm sm:text-base no-underline transition-colors duration-200 mb-3 box-border gap-2 focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]"
+        class="flex items-center justify-center w-full py-3 sm:py-3.5 px-4 sm:px-5 bg-[#e5e7eb] text-[#1f2937] font-medium rounded-full text-center text-sm sm:text-base no-underline transition-colors duration-200 mb-3 box-border gap-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]"
         target="_blank"
         rel="noopener"
       >
@@ -201,7 +166,7 @@
         href="https://www.instagram.com/realagam1" 
         target="_blank" 
         rel="noopener" 
-        class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full no-underline transition-colors duration-200 mx-2 focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
+        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-[#e5e7eb] text-black no-underline transition-colors duration-200 mx-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
         aria-label="Instagram"
       >
         <i data-lucide="instagram" aria-hidden="true"></i>
@@ -211,7 +176,7 @@
         href="https://www.facebook.com/agamriyandana.id" 
         target="_blank" 
         rel="noopener" 
-        class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full no-underline transition-colors duration-200 mx-2 focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
+        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-[#e5e7eb] text-black no-underline transition-colors duration-200 mx-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
         aria-label="Facebook"
       >
         <i data-lucide="facebook" aria-hidden="true"></i>
@@ -221,7 +186,7 @@
         href="https://youtube.com/@agam_riyandana" 
         target="_blank" 
         rel="noopener" 
-        class="social-icon w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full no-underline transition-colors duration-200 mx-2 focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
+        class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-[#e5e7eb] text-black no-underline transition-colors duration-200 mx-2 hover:bg-[#d1d5db] focus:bg-[#d1d5db] focus:outline-none focus:shadow-[0_0_0_2px_rgba(229,231,235,0.5)]" 
         aria-label="YouTube"
       >
         <i data-lucide="youtube" aria-hidden="true"></i>
@@ -252,58 +217,14 @@
       }
     }
 
-    // Improved image error handling function
-    function handleImageError(img) {
-      console.log("Image failed to load, trying alternative sources...");
-      
-      // Try local path as fallback
-      if (img.src !== 'agam.webp') {
-        console.log("Trying local path...");
-        img.src = 'agam.webp';
-        return;
-      }
-      
-      // If local path also fails, try another common path
-      if (img.src !== '/agam.webp') {
-        console.log("Trying root path...");
-        img.src = '/agam.webp';
-        return;
-      }
-      
-      // If all image paths fail, use the base64 fallback
-      console.log("Using base64 fallback image...");
-      img.src = fallbackImageBase64;
-      
-      // If you want to replace with a div instead of an image
-      // Uncomment the following code:
-      /*
-      const container = document.getElementById('cover-container');
-      const fallbackDiv = document.createElement('div');
-      fallbackDiv.className = 'absolute top-0 left-0 w-full h-full cover-fallback';
-      fallbackDiv.innerHTML = 'Agam Riyandana<br>Kreator Digital Indonesia';
-      
-      // Remove the image
-      img.remove();
-      
-      // Add the fallback div
-      container.appendChild(fallbackDiv);
-      */
-    }
+    // Handle errors gracefully for images
+    document.getElementById('cover-image').addEventListener('error', function() {
+      this.onerror = null;
+      this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%23333"%3E%3C/rect%3E%3Ctext x="50" y="50" font-family="system-ui" font-size="12" text-anchor="middle" fill="%23fff"%3EImage not available%3C/text%3E%3C/svg%3E';
+    });
     
     // Initialize Lucide icons after the script has loaded
     document.addEventListener('DOMContentLoaded', function() {
-      // Try to preload the image to check if it exists
-      const imagePreloader = new Image();
-      imagePreloader.onload = function() {
-        console.log("Cover image preloaded successfully");
-      };
-      imagePreloader.onerror = function() {
-        console.log("Cover image preload failed, will try fallbacks when needed");
-        // Don't replace immediately, let the visible image try its own fallbacks
-      };
-      imagePreloader.src = 'https://agamofficial.my.id/agam.webp';
-      
-      // Initialize Lucide icons
       if (typeof lucide !== 'undefined' && lucide.createIcons) {
         lucide.createIcons();
       } else {
