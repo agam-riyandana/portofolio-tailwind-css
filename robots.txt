@@ -1,0 +1,4 @@
+# robots.txt generated
+User-agent: *
+Disallow: 
+Sitemap: https://agamofficial.my.id/sitemap.xml
